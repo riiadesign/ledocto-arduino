@@ -37,7 +37,14 @@ void loop() {
   buttonFxA = digitalRead(PIN_FX_A) == HIGH;
   buttonFxB = digitalRead(PIN_FX_B) == HIGH;
   
+  // todo: next button to start / advance scene
+
+  // todo: stop button to cut playback & clear queue
+
+  // todo: effect buttons to overlay an animation ignoring black leds
+
   // set all leds to the current frame's colors
+  // todo: queue optimization, eg. if nothing is in the queue
   for (int i = 0; i <= NUM_LEDS; i++) {
     leds[i] = queue[qPosition][i];
   }
